@@ -17,10 +17,16 @@
     align-items: center;
 }
 
+@media (max-width: 767px) {
+    .taskListContainer__form {
+        flex-wrap: wrap;
+    }
+}
+
 .taskListContainer__input {
-    flex-basis: 500px;
+    max-width: 100%;
     padding: 6px;
-    flex-shrink: 1;
+    margin: 10px;
     flex-grow: 1;
 }
 
@@ -32,6 +38,12 @@
     color: rgb(255, 255, 255);
     margin: 10px;
     justify-self: flex-end;
+}
+
+@media (max-width: 767px) {
+.taskListContainer__submitButton {
+        width: 100%;
+    }
 }
 
 .taskListContainer__taskList {
@@ -58,10 +70,12 @@
     flex-shrink: 0;
 }
 
+.taskListContainer__doneButton--removeButton {
+    background-color: hsl(0, 100%, 50%);
+}
+
 .taskListContainer__taskContent {
-    flex-basis: 600px;
     padding: 0px 10px;
-    flex-shrink: 1;
     flex-grow: 1;
 }
 
@@ -69,11 +83,3 @@
     text-decoration: line-through;
 }
 
-.taskListContainer__removeButton {
-    border: none;
-    width: 30px;
-    height: 30px;
-    background-color: hsl(0, 100%, 50%);
-    color: rgb(255, 255, 255);
-    flex-shrink: 0;
-}
