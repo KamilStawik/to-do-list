@@ -17,12 +17,11 @@
     align-items: center;
 }
 
-.taskListContainer__input{
+.taskListContainer__input {
     flex-basis: 500px;
     padding: 6px;
     flex-shrink: 1;
     flex-grow: 1;
-
 }
 
 .taskListContainer__submitButton {
@@ -31,7 +30,7 @@
     height: 34px;
     background-color: hsl(180, 100%, 25%);
     color: rgb(255, 255, 255);
-    margin: 10px;   
+    margin: 10px;
     justify-self: flex-end;
 }
 
@@ -41,7 +40,7 @@
     margin-top: 2px;
 }
 
-.listItem {
+.taskListContainer__listItem {
     border-bottom: rgb(238, 238, 238) solid 1px;
     margin-top: 15px;
     padding: 10px;
@@ -49,7 +48,7 @@
     align-items: center;
 }
 
-.doneButton {
+.taskListContainer__doneButton {
     border: none;
     width: 30px;
     height: 30px;
@@ -59,18 +58,18 @@
     flex-shrink: 0;
 }
 
-.taskContent {
+.taskListContainer__taskContent {
     flex-basis: 600px;
     padding: 0px 10px;
     flex-shrink: 1;
     flex-grow: 1;
 }
 
-.taskContent--done {
+.taskListContainer__taskContent--done {
     text-decoration: line-through;
 }
 
-.removeButton {
+.taskListContainer__removeButton {
     border: none;
     width: 30px;
     height: 30px;
