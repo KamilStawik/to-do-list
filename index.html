@@ -6,40 +6,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista zadań</title>
-    <!-- POPRAWIĆ favico i opengraph -->
-    <link rel="icon" href="https://github.com/KamilStawik/currency-converter/blob/main/images/logo1.png?raw=true">
-    <meta property="og:image"
-        content="https://github.com/KamilStawik/currency-converter/blob/main/images/share1.png?raw=true">
+    <link rel="icon" href="/images/logo1.png">
+    <meta property="og:image" content="/image/share1.png>">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
         integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
         crossorigin="anonymous" />
+
     <link href="css/style.css" rel="stylesheet">
     <link href="css/taskListContainer.css" rel="stylesheet">
 
     <script defer src="js/script.js"></script>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
         rel="stylesheet">
 
 </head>
-
 
 <body class="body">
     <main class="main">
 
         <header>
-            <h1>Lista zadań</h1>
+            <h1 class="mainHeader">Lista zadań</h1>
         </header>
 
+        <div class="taskListContainer">
+            <header>
+                <h2 class="taskListContainer__subheader">Dodaj nowe zadanie</h2>
+            </header>
+        </div>
 
+        <form class="js-form taskListContainer__form">
 
-
-        <form class="js-form">
-
-            <input class="js-newTask">
-            <button>Dodaj zadanie!</button>
+            <input class="js-newTask taskListContainer__input" autofocus placeholder="Co jest do zrobienia?">
+            <button class="taskListContainer__submitButton">Dodaj zadanie!</button>
 
         </form>
 
@@ -51,21 +53,13 @@
 
         <div class="taskListContainer">
 
-
             <ul class="js-tasks taskListContainer__taskList">
-
 
             </ul>
 
-
-
-
-
         </div>
 
-
     </main>
-
 
 </body>
 

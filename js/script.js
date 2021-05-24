@@ -26,6 +26,7 @@
         render();
     }
 
+
     const onFormSubmit = (event) => {
         event.preventDefault();
 
@@ -36,6 +37,9 @@
         }
 
         addNewTask(newTaskContent);
+
+        document.querySelector(".js-newTask").value = "";
+        document.querySelector(".js-newTask").focus();
 
         render();
     }
@@ -64,7 +68,7 @@
             });
         });
     }
-    
+
     const render = () => {
         let htmlString = "";
 

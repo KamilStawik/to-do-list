@@ -8,9 +8,15 @@ html {
 
 .body {
     background-color: rgb(238, 238, 238);
+    font-family: "Lato", sans-serif;
 }
 
 .main {
     max-width: 800px;
-    margin: 20px auto;
+    margin: 10px auto;
+}
+
+.mainHeader {
+    padding: 10px;
+    font-weight: 900;
 }
