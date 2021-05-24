@@ -33,6 +33,7 @@
         const newTaskContent = document.querySelector(".js-newTask").value.trim();
 
         if (newTaskContent === "") {
+            document.querySelector(".js-newTask").focus();
             return;
         }
 
@@ -75,15 +76,13 @@
         for (const task of tasks) {
             htmlString += `
                 <li class =\"taskListContainer__listItem\"">
-                <button class="js-done taskListContainer__doneButton">${task.done ? "✓" : ""}</button>
-                <span ${task.done ? " class =\"taskListContainer__taskContent taskListContainer__taskContent--done\"" : " class =\"taskListContainer__taskContent\""}>${task.content}</span>
-                <button class="js-remove taskListContainer__removeButton">🗑</button>
+                    <button class="js-done taskListContainer__doneButton">${task.done ? "✓" : ""}</button>
+                    <span class="taskListContainer__taskContent${task.done ? " taskListContainer__taskContent--done" : ""}">${task.content}</span>
+                    <button class="js-remove taskListContainer__doneButton taskListContainer__doneButton--removeButton">🗑</button>
                 </li>
             `;
         }
-
         document.querySelector(".js-tasks").innerHTML = htmlString;
-
         bindEvents();
     };
 
