@@ -1,0 +1,55 @@
+.taskListContainer {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 2px;
+}
+
+.taskListContainer__subheader {}
+
+
+.taskListContainer__taskList {
+    list-style: none;
+}
+
+.listItem {
+    width: 700px;
+    border-bottom: rgb(238, 238, 238) solid 1px;
+    margin-top: 15px;
+
+    display: flex;
+    justify-content: space-between;
+
+ 
+}
+
+.doneButton {
+    border: none;
+    width: 30px;
+    height: 30px;
+    margin-top: -10px;
+    background-color: hsl(120, 100%, 25%);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    align-self: center;
+}
+
+.taskContent {
+    flex-basis: 500px;
+
+}
+
+.taskContent--done {
+    text-decoration: line-through;
+}
+
+
+.removeButton {
+    border: none;
+    width: 30px;
+    height: 30px;
+    margin-top: -10px;
+    background-color: hsl(0, 100%, 50%);
+    color: rgb(255, 255, 255);
+    align-self: center;
+
+}
