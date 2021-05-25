@@ -1,0 +1,15 @@
+.main {
+    max-width: 800px;
+    margin: 10px auto;
+}
+
+@media (max-width: 767px) {
+    .main {
+        margin: 5px;
+    }
+}
+
+.main__Header {
+    padding: 10px;
+    font-weight: 900;
+}

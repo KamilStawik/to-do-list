@@ -14,7 +14,10 @@
         crossorigin="anonymous" />
 
     <link href="css/style.css" rel="stylesheet">
-    <link href="css/taskListContainer.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/section.css" rel="stylesheet">
+    <link href="css/form.css" rel="stylesheet">
+    <link href="css/taskList.css" rel="stylesheet">
 
     <script defer src="js/script.js"></script>
 
@@ -29,35 +32,29 @@
     <main class="main">
 
         <header>
-            <h1 class="mainHeader">Lista zadań</h1>
+            <h1 class="main__Header">Lista zadań</h1>
         </header>
 
-        <div class="taskListContainer">
+        <section class="section">
             <header>
-                <h2 class="taskListContainer__subheader">Dodaj nowe zadanie</h2>
+                <h2 class="section__header">Dodaj nowe zadanie</h2>
             </header>
-        </div>
+        </section>
 
-        <form class="js-form taskListContainer__form">
+        <form class="js-form form">
 
-            <input class="js-newTask taskListContainer__input" autofocus placeholder="Co jest do zrobienia?">
-            <button class="taskListContainer__submitButton">Dodaj zadanie!</button>
+            <input class="js-newTask form__input" autofocus required placeholder="Co jest do zrobienia?">
+            <button class="form__button">Dodaj zadanie!</button>
 
         </form>
 
-        <div class="taskListContainer">
+        <section class="section">
             <header>
-                <h2 class="taskListContainer__subheader">Lista zadań</h2>
+                <h2 class="section__header">Lista zadań</h2>
             </header>
-        </div>
+        </section>
 
-        <div class="taskListContainer">
-
-            <ul class="js-tasks taskListContainer__taskList">
-
-            </ul>
-
-        </div>
+        <ul class="js-tasks taskList"></ul>
 
     </main>
 

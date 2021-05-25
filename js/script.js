@@ -13,21 +13,21 @@
         render();
     }
 
-
     const onFormSubmit = (event) => {
         event.preventDefault();
 
-        const newTaskContent = document.querySelector(".js-newTask").value.trim();
+        const newTaskElement = document.querySelector(".js-newTask")
+        const newTaskContent = newTaskElement.value.trim();
 
         if (newTaskContent === "") {
-            document.querySelector(".js-newTask").focus();
+            newTaskElement.focus();
             return;
         }
 
         addNewTask(newTaskContent);
 
-        document.querySelector(".js-newTask").value = "";
-        document.querySelector(".js-newTask").focus();
+        newTaskElement.value = "";
+        newTaskElement.focus();
 
         render();
     }
@@ -62,17 +62,16 @@
 
         for (const task of tasks) {
             htmlString += `
-                <li class =\"taskListContainer__listItem\"">
-                    <button class="js-done taskListContainer__doneButton">${task.done ? "✓" : ""}</button>
-                    <span class="taskListContainer__taskContent${task.done ? " taskListContainer__taskContent--done" : ""}">${task.content}</span>
-                    <button class="js-remove taskListContainer__doneButton taskListContainer__doneButton--removeButton">🗑</button>
+                <li class =\"taskList__listItem\"">
+                    <button class="js-done taskList__button">${task.done ? "✓" : ""}</button>
+                    <span class="taskList__taskContent${task.done ? " taskList__taskContent--done" : ""}">${task.content}</span>
+                    <button class="js-remove taskList__button taskList__button--removeButton">🗑</button>
                 </li>
             `;
         }
         document.querySelector(".js-tasks").innerHTML = htmlString;
         bindEvents();
     };
-
 
     const init = () => {
 
