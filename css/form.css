@@ -34,3 +34,13 @@
         width: 100%;
     }
 }
+
+.form__headerContainer {
+    background-color: #fff;
+    margin-top: 2px;
+}
+
+.form__header {
+    padding: 20px;
+    margin: 0px;
+}

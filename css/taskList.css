@@ -13,6 +13,10 @@
     align-items: center;
 }
 
+.taskList__listItem--hiden {
+    display: none;
+}
+
 .taskList__button {
     border: none;
     width: 30px;
@@ -35,4 +39,14 @@
 
 .taskList__taskContent--done {
     text-decoration: line-through;
+}
+
+.taskList__headerContainer {
+    background-color: #fff;
+    margin-top: 2px;
+}
+
+.taskList__header {
+    padding: 20px;
+    margin: 0px;
 }
