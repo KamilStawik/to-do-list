@@ -27,6 +27,12 @@
     color: hsl(0, 0%, 100%);
     margin: 10px;
     justify-self: flex-end;
+    transition: 1s;
+}
+
+.form__button:hover {
+    background-color: hsl(180, 100%, 35%);
+    transform: scale(1.1);
 }
 
 @media (max-width: 767px) {

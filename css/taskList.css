@@ -25,10 +25,19 @@
     color: rgb(255, 255, 255);
     font-weight: bold;
     flex-shrink: 0;
+    transition: 1s;
+}
+
+.taskList__button:hover {
+    background-color: hsl(120, 100%, 30%);
 }
 
 .taskList__button--removeButton {
     background-color: hsl(0, 100%, 50%);
+}
+
+.taskList__button--removeButton:hover {
+    background-color: hsl(0, 100%, 65%);
 }
 
 .taskList__taskContent {
@@ -63,6 +72,11 @@
     background-color: hsl(0, 0%, 100%);
     color: hsl(180, 100%, 25%);
     margin: 10px 20px 10px 0px;
+    transition: 1s;
+}
+
+.taskList__topButton:hover {
+    color: hsl(180, 100%, 35%);
 }
 
 .taskList__topButton:disabled {
