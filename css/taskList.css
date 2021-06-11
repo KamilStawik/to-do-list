@@ -51,7 +51,6 @@
 }
 
 .taskList__headerContainer {
-    width: 100%;
     background-color: hsl(0, 0%, 100%);
     margin-top: 2px;
     display: flex;
@@ -59,13 +58,39 @@
     justify-content: space-between;
 }
 
-.taskList__header {
-    padding: 20px;
-    margin: 0px;
-    flex-grow: 1;
+@media (max-width: 767px) {
+    .taskList__headerContainer {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
 
-.taskList__topButtonsContainer {}
+.taskList__header {
+    flex-basis: 51%;
+}
+
+@media (max-width: 767px) {
+    .taskList__header {
+        flex-basis: 100%;
+    }
+}
+
+.taskList__headerText {
+    padding: 20px;
+    margin: 0px;
+}
+
+.taskList__topButtonsContainer {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 767px) {
+    .taskList__topButtonsContainer {
+        flex-direction: column;
+        align-self: center;
+    }
+}
 
 .taskList__topButton {
     border: none;

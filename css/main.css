@@ -1,6 +1,7 @@
 .main {
     max-width: 800px;
     margin: 10px auto;
+    padding: 8px;
 }
 
 @media (max-width: 767px) {

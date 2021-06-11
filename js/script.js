@@ -51,12 +51,7 @@
     }
 
     const toggleTaskDone = (index) => {
-
-        if (tasks[index].done === false) {
-            newDoneValue = true;
-        } else {
-            newDoneValue = false;
-        }
+        tasks[index].done === false ? newDoneValue = true : newDoneValue = false;
 
         tasks = [
             ...tasks.slice(0, index),
@@ -94,9 +89,7 @@
                 hideDoneTasks = !hideDoneTasks;
                 render();
             });
-        } else {
-            console.log("nie ma buttonów");
-        }
+        } else { }
 
         const allTasksDoneButton = document.querySelector(".js-allTasksDoneButton");
 
@@ -104,9 +97,7 @@
             allTasksDoneButton.addEventListener("click", () => {
                 markAllTasksDone();
             });
-        } else {
-            console.log("nie ma buttonów");
-        }
+        } else { }
     }
 
     const renderButtons = () => {
@@ -114,19 +105,15 @@
 
         if (tasks.length > 0) {
 
-            console.log("tablica zawiera obiekty")
-
             htmlString += `
                 <button class =\"taskList__topButton js-hideDoneButton\">${hideDoneTasks === false ? "Ukryj ukończone" : "Pokaż ukończone"}</button>
                 <button class =\"taskList__topButton js-allTasksDoneButton\" ${checkIfAllTasksAreDone() === true ? "disabled" : ""}>Ukończ wszystkie</button>
         `;
-        } else {
-            console.log("tablica jest pusta")
-        }
+        } else { }
+
         document.querySelector(".js-topButtons").innerHTML = htmlString;
         bindTopButtonsEvents();
     }
-
 
     const renderTaskList = () => {
         let htmlString = "";
@@ -168,5 +155,4 @@
     };
 
     init();
-
 }
