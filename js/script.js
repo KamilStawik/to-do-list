@@ -22,6 +22,15 @@
         render();
     }
 
+    const checkIfAllTasksAreDone = () => {
+        const tasksUndone = tasks.filter(task => task.done === false)
+        if (tasksUndone.length > 0) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
     const onFormSubmit = (event) => {
         event.preventDefault();
 
@@ -108,8 +117,8 @@
             console.log("tablica zawiera obiekty")
 
             htmlString += `
-                <button class =\"taskList__topButton js-hideDoneButton\"">Ukryj ukończone</button>
-                <button class =\"taskList__topButton js-allTasksDoneButton\"">Ukończ wszystkie</button>
+                <button class =\"taskList__topButton js-hideDoneButton\">${hideDoneTasks === false ? "Ukryj ukończone" : "Pokaż ukończone"}</button>
+                <button class =\"taskList__topButton js-allTasksDoneButton\" ${checkIfAllTasksAreDone() === true ? "disabled" : ""}>Ukończ wszystkie</button>
         `;
         } else {
             console.log("tablica jest pusta")

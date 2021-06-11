@@ -1,12 +1,12 @@
 .taskList {
-    background-color: #fff;
+    background-color: hsl(0, 0%, 100%);
     list-style: none;
     padding: 20px 5px;
     margin-top: 2px;
 }
 
 .taskList__listItem {
-    border-bottom: rgb(238, 238, 238) solid 1px;
+    border-bottom: hsl(0, 0%, 93%) solid 1px;
     margin-top: 15px;
     padding: 10px;
     display: flex;
@@ -42,11 +42,29 @@
 }
 
 .taskList__headerContainer {
-    background-color: #fff;
+    width: 100%;
+    background-color: hsl(0, 0%, 100%);
     margin-top: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .taskList__header {
     padding: 20px;
     margin: 0px;
+    flex-grow: 1;
+}
+
+.taskList__topButtonsContainer {}
+
+.taskList__topButton {
+    border: none;
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(180, 100%, 25%);
+    margin: 10px 20px 10px 0px;
+}
+
+.taskList__topButton:disabled {
+    color: hsl(0, 0%, 80%);
 }
