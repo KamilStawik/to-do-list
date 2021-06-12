@@ -18,7 +18,9 @@
     }
 
     const markAllTasksDone = () => {
-        tasks.forEach(task => { task.done = true });
+        tasks = tasks.map((task) => ({
+            ...task, done: true,
+        }));
         render();
     }
 
@@ -89,7 +91,7 @@
                 hideDoneTasks = !hideDoneTasks;
                 render();
             });
-        } else { }
+        }
 
         const allTasksDoneButton = document.querySelector(".js-allTasksDoneButton");
 
@@ -97,7 +99,7 @@
             allTasksDoneButton.addEventListener("click", () => {
                 markAllTasksDone();
             });
-        } else { }
+        }
     }
 
     const renderButtons = () => {
@@ -109,7 +111,7 @@
                 <button class =\"taskList__topButton js-hideDoneButton\">${hideDoneTasks === false ? "Ukryj ukończone" : "Pokaż ukończone"}</button>
                 <button class =\"taskList__topButton js-allTasksDoneButton\" ${checkIfAllTasksAreDone() === true ? "disabled" : ""}>Ukończ wszystkie</button>
         `;
-        } else { }
+        }
 
         document.querySelector(".js-topButtons").innerHTML = htmlString;
         bindTopButtonsEvents();
@@ -119,23 +121,13 @@
         let htmlString = "";
 
         for (const task of tasks) {
-            if (hideDoneTasks === false) {
-                htmlString += `
-                <li class =\"taskList__listItem\"">
+            htmlString += `
+                <li class =\"taskList__listItem${task.done && hideDoneTasks ? " taskList__listItem--hiden" : ""}">
                     <button class="js-done taskList__button">${task.done ? "✓" : ""}</button>
                     <span class="taskList__taskContent${task.done ? " taskList__taskContent--done" : ""}">${task.content}</span>
                     <button class="js-remove taskList__button taskList__button--removeButton">🗑</button>
                 </li>
             `;
-            } else {
-                htmlString += `
-                <li class =\"taskList__listItem${task.done ? " taskList__listItem--hiden" : ""}">
-                    <button class="js-done taskList__button">${task.done ? "✓" : ""}</button>
-                    <span class="taskList__taskContent${task.done ? " taskList__taskContent--done" : ""}">${task.content}</span>
-                    <button class="js-remove taskList__button taskList__button--removeButton">🗑</button>
-                </li>
-            `;
-            }
         }
         document.querySelector(".js-tasks").innerHTML = htmlString;
         bindTaskListEvents();
