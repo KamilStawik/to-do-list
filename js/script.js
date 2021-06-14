@@ -24,14 +24,7 @@
         render();
     }
 
-    const checkIfAllTasksAreDone = () => {
-        const tasksUndone = tasks.filter(task => task.done === false)
-        if (tasksUndone.length > 0) {
-            return false;
-        } else {
-            return true;
-        }
-    }
+    const checkIfAllTasksAreDone = () => tasks.every(task => task.done);
 
     const onFormSubmit = (event) => {
         event.preventDefault();
@@ -106,10 +99,13 @@
         let htmlString = "";
 
         if (tasks.length > 0) {
-
             htmlString += `
-                <button class =\"taskList__topButton js-hideDoneButton\">${hideDoneTasks === false ? "Ukryj ukończone" : "Pokaż ukończone"}</button>
-                <button class =\"taskList__topButton js-allTasksDoneButton\" ${checkIfAllTasksAreDone() === true ? "disabled" : ""}>Ukończ wszystkie</button>
+                <button class =\"taskList__topButton js-hideDoneButton\">
+                    ${hideDoneTasks === false ? "Ukryj ukończone" : "Pokaż ukończone"}
+                </button>
+                <button class =\"taskList__topButton js-allTasksDoneButton\" ${checkIfAllTasksAreDone() === true ? "disabled" : ""}>
+                    Ukończ wszystkie
+                </button>
         `;
         }
 

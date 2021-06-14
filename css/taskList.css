@@ -25,11 +25,16 @@
     color: rgb(255, 255, 255);
     font-weight: bold;
     flex-shrink: 0;
-    transition: 1s;
+    transition: 0.5s;
+    cursor: pointer;
 }
 
 .taskList__button:hover {
     background-color: hsl(120, 100%, 30%);
+}
+
+.taskList__button:active {
+    background-color: hsl(120, 100%, 35%);
 }
 
 .taskList__button--removeButton {
@@ -37,7 +42,11 @@
 }
 
 .taskList__button--removeButton:hover {
-    background-color: hsl(0, 100%, 65%);
+    background-color: hsl(0, 100%, 60%);
+}
+
+.taskList__button--removeButton:hover {
+    background-color: hsl(0, 100%, 70%);
 }
 
 .taskList__taskContent {
@@ -97,11 +106,16 @@
     background-color: hsl(0, 0%, 100%);
     color: hsl(180, 100%, 25%);
     margin: 10px 20px 10px 0px;
-    transition: 1s;
+    transition: 0.5s;
+    cursor: pointer;
 }
 
 .taskList__topButton:hover {
     color: hsl(180, 100%, 35%);
+}
+
+.taskList__topButton:active {
+    color: hsl(180, 100%, 45%);
 }
 
 .taskList__topButton:disabled {

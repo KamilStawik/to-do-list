@@ -26,12 +26,18 @@
     background-color: hsl(180, 100%, 25%);
     color: hsl(0, 0%, 100%);
     margin: 10px;
+    cursor: pointer;
     justify-self: flex-end;
-    transition: 1s;
+    transition: 0.5s;
 }
 
 .form__button:hover {
     background-color: hsl(180, 100%, 35%);
+    transform: scale(1.1);
+}
+
+.form__button:active {
+    background-color: hsl(180, 100%, 45%);
     transform: scale(1.1);
 }
 
